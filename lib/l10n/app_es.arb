@@ -1,0 +1,15 @@
+{
+  "@@locale": "es",
+  "@@last_modified": "2026-04-01",
+
+  "appTitle": "Plugoo",
+  "welcomeTitle": "Bienvenido a Plugoo",
+  "welcomeSubtitle": "Colaborá, compartí y crezcamos juntos",
+  "loginButton": "Iniciar sesión",
+  "registerButton": "Registrarse",
+  "emailLabel": "Correo electrónico",
+  "passwordLabel": "Contraseña",
+  "errorGeneric": "Algo salió mal. Por favor, intentá de nuevo.",
+  "errorNetwork": "Sin conexión a internet. Revisá tu red.",
+  "errorUnauthorized": "Sesión expirada. Por favor, volvé a iniciar sesión."
+}

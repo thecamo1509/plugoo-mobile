@@ -1,0 +1,54 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2026-04-01",
+
+  "appTitle": "Plugoo",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+
+  "welcomeTitle": "Welcome to Plugoo",
+  "@welcomeTitle": {
+    "description": "Welcome screen title"
+  },
+
+  "welcomeSubtitle": "Collaborate, share and grow together",
+  "@welcomeSubtitle": {
+    "description": "Welcome screen subtitle"
+  },
+
+  "loginButton": "Log In",
+  "@loginButton": {
+    "description": "Login button label"
+  },
+
+  "registerButton": "Sign Up",
+  "@registerButton": {
+    "description": "Register button label"
+  },
+
+  "emailLabel": "Email",
+  "@emailLabel": {
+    "description": "Email field label"
+  },
+
+  "passwordLabel": "Password",
+  "@passwordLabel": {
+    "description": "Password field label"
+  },
+
+  "errorGeneric": "Something went wrong. Please try again.",
+  "@errorGeneric": {
+    "description": "Generic error message"
+  },
+
+  "errorNetwork": "No internet connection. Check your network.",
+  "@errorNetwork": {
+    "description": "Network error message"
+  },
+
+  "errorUnauthorized": "Session expired. Please log in again.",
+  "@errorUnauthorized": {
+    "description": "Unauthorized error message"
+  }
+}

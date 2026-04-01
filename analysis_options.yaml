@@ -1,0 +1,61 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    missing_required_param: error
+    missing_return: error
+    todo: info
+    avoid_print: warning
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+    - '**/*.gen.dart'
+    - 'lib/l10n/app_localizations*.dart'
+
+linter:
+  rules:
+    # Style
+    always_declare_return_types: true
+    always_put_required_named_parameters_first: true
+    always_use_package_imports: true
+    avoid_bool_literals_in_conditional_expressions: true
+    avoid_catching_errors: true
+    avoid_empty_else: true
+    avoid_field_initializers_in_const_classes: true
+    avoid_multiple_declarations_per_line: true
+    avoid_positional_boolean_parameters: true
+    avoid_redundant_argument_values: true
+    avoid_returning_null_for_void: true
+    avoid_setters_without_getters: true
+    avoid_single_cascade_in_expression_statements: true
+    avoid_unnecessary_containers: true
+    avoid_void_async: true
+
+    # Performance
+    avoid_slow_async_io: true
+    cancel_subscriptions: true
+    close_sinks: true
+
+    # Architecture
+    directives_ordering: true
+    library_prefixes: true
+    no_adjacent_strings_in_list: true
+
+    # Flutter specific
+    use_build_context_synchronously: true
+    use_colored_box: true
+    use_decorated_box: true
+    use_full_hex_values_for_flutter_colors: true
+    use_key_in_widget_constructors: true
+
+    # Null safety
+    cast_nullable_to_non_nullable: true
+    null_check_on_nullable_type_parameter: true
+    unnecessary_null_checks: true
+
+    # Disabled (conflicting with code gen)
+    depend_on_referenced_packages: false
