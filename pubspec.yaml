@@ -31,6 +31,14 @@ dependencies:
   # Environment config
   envied: ^0.5.4
 
+  # Maps & Location
+  google_maps_flutter: ^2.6.0
+  geolocator: ^11.0.0
+  permission_handler: ^11.3.0
+
+  # Auth (Google Sign-In)
+  google_sign_in: ^6.2.1
+
   # Utilities
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0

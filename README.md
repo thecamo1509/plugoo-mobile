@@ -190,6 +190,49 @@ Merges to `main` also build a debug APK and iOS (no-codesign) to catch compile-t
 
 ---
 
+## Google Maps API Key Setup
+
+The `GOOGLE_MAPS_API_KEY` is **never** stored in source code. It is injected at build time.
+
+### Local development
+
+1. Create (or open) `android/local.properties` — this file is gitignored:
+
+```properties
+flutter.sdk=/path/to/flutter
+GOOGLE_MAPS_API_KEY=YOUR_KEY_HERE
+```
+
+2. The key is read in `android/app/build.gradle` and inserted into `AndroidManifest.xml`
+   via the `${GOOGLE_MAPS_API_KEY}` manifest placeholder.
+
+### CI (GitHub Actions / Codemagic)
+
+Set `GOOGLE_MAPS_API_KEY` as a **repository secret** or **environment secret**.
+The Gradle build reads `System.getenv('GOOGLE_MAPS_API_KEY')` when `local.properties` is absent.
+
+### How to obtain a key
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/).
+2. Enable **Maps SDK for Android** and **Maps SDK for iOS**.
+3. Create an API key and restrict it to your app's SHA-1 fingerprint.
+4. Add the key to `local.properties` (local) or CI secrets (CI).
+
+> **Never commit the key.** The `.gitignore` excludes `android/local.properties`.
+
+---
+
+## Android — Edge-to-Edge & Back Gesture
+
+- **Edge-to-edge**: `main.dart` calls `SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge)`.
+  Flutter draws behind the status bar and gesture navigation bar. Use `MediaQuery.of(context).padding`
+  or `SafeArea` in your widgets to avoid overlap.
+- **Predictive Back Gesture (Android 13+)**: `android:enableOnBackInvokedCallback="true"` is set in
+  `AndroidManifest.xml`. GoRouter handles the back stack natively — no additional config needed.
+- **Minimum SDK**: 24 (Android 7.0). Target SDK: 34 (Android 14).
+
+---
+
 ## Contributing
 
 1. Branch from `develop`: `git checkout -b feat/your-feature develop`
